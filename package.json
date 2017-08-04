@@ -1,8 +1,6 @@
 {
-  "manifestVersion": 1,
   "name": "preact-preact-router-snippets",
-  "id": "preact-preact-router-snippets",
-  "description": "Preact code snippets all in one",
+  "description": "Preact and Preact Router code snippets all in one",
   "version": "0.1.1",
   "displayName": "Preact/preact-router Snippets",
   "publisher": "saravieira",
@@ -21,15 +19,11 @@
   "categories": [
     "Snippets"
   ],
-  "targets": [
-    {
-      "id": "Microsoft.VisualStudio.Services"
-    }
-  ],
-  "contributions": [
+  "contributes": {
+    "snippets": [
       {
-          "language": "javascriptreact",
-          "path": "./snippets/snippets.json"
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
       },
       {
         "language": "javascript",
@@ -40,4 +34,5 @@
         "path": "./snippets/snippets.json"
       }
     ]
+  }
 }
