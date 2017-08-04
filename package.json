@@ -1,7 +1,7 @@
 {
   "name": "preact-preact-router-snippets",
   "description": "Preact and Preact Router code snippets all in one",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "Preact/preact-router Snippets",
   "publisher": "saravieira",
   "icon": "images/logo.png",
