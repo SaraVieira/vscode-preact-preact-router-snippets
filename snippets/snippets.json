@@ -1,66 +1,41 @@
 {
   // import
-  "ES6 React Import": {
-		"prefix": "imr",
-		"body": "import React from 'react';"
+  "ES6 Preact Import": {
+		"prefix": "imp",
+		"body": "import { h } from 'preact';"
 	},
-  "ES6 React & Component Import": {
-		"prefix": "imrc",
-		"body": "import React, { Component } from 'react';"
-	},
-  "ES6 PropTypes Import": {
-		"prefix": "impt",
-		"body": "import PropTypes from 'prop-types';"
-	},
+  "ES6 Preact & Component Import": {
+		"prefix": "impc",
+		"body": "import { h, Component } from 'preact';"
+  },
+
+
   "ES6 Component Import": {
 		"prefix": "imc",
 		"body": "import ${1:componentName} from './Components/${1:componentName}';"
 	},
-  // React
-  "reactClassCompoment": {
-    "prefix": "rcc",
-    "body": "import React, { Component } from 'react';\n\nclass ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default ${1:componentName};",
-    "description": "Creates a React component class with ES6 module system"
+  // Preact
+  "PreactClassCompoment": {
+    "prefix": "pcc",
+    "body": "import { h, Component } from 'preact';\n\nclass ${1:componentName} extends Component {\n\trender({}, {}) {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default ${1:componentName};",
+    "description": "Creates a Preact component class with ES6 module system"
   },
 
-  "reactJustClassCompoment": {
-    "prefix": "rcjc",
-    "body": "class ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n",
-    "description": "Creates a React component class with ES6 module system"
+  "PreactJustClassCompoment": {
+    "prefix": "pjc",
+    "body": "class ${1:componentName} extends Component {\n\trender({}, {}) {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n",
+    "description": "Creates a Preact component class with ES6 module system"
   },
 
-  "reactClassCompomentPropTypes": {
-    "prefix": "rccp",
-    "body": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\nclass ${1:componentName} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t$0\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n${1:componentName}.propTypes = {\n\n};\n\nexport default ${1:componentName};",
-    "description": "Creates a React component class with PropTypes and ES6 module system"
+  "preactStateless": {
+    "prefix": "psc",
+    "body": "import { h, Component } from 'preact';\n\nconst ${1:componentName} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\nexport default ${1:componentName};",
+    "description": "Creates a stateless Preact component without PropTypes and ES6 module system"
   },
-
-  "reactClassCompomentWithMethods": {
-    "prefix": "rcfc",
-    "body": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\n\nclass ${1:componentName} extends Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\n\t}\n\n\tcomponentWillMount() {\n\n\t}\n\n\tcomponentDidMount() {\n\n\t}\n\n\tcomponentWillReceiveProps(nextProps) {\n\n\t}\n\n\tshouldComponentUpdate(nextProps, nextState) {\n\n\t}\n\n\tcomponentWillUpdate(nextProps, nextState) {\n\n\t}\n\n\tcomponentDidUpdate(prevProps, prevState) {\n\n\t}\n\n\tcomponentWillUnmount() {\n\n\t}\n\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\n\t\t\t</div>\n\t\t);\n\t}\n}\n\n${1:componentName}.propTypes = {\n\n};\n\nexport default ${1:componentName};",
-    "description": "Creates a React component class with PropTypes and all lifecycle methods and ES6 module system"
-  },
-
-  "reactStateless": {
-    "prefix": "rsc",
-    "body": "import React from 'react';\n\nconst ${1:componentName} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\nexport default ${1:componentName};",
-    "description": "Creates a stateless React component without PropTypes and ES6 module system"
-  },
-  "reactStatelessProps": {
+  "preactStatelessProps": {
     "prefix": "rscp",
-    "body": "import React from 'react';\nimport PropTypes from 'prop-types';\n\nconst ${1:componentName} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};\n\n${1:componentName}.propTypes = {\n\t$0\n};\n\nexport default ${1:componentName};",
-    "description": "Creates a stateless React component with PropTypes and ES6 module system"
-  },
-
-  "classConstructor": {
-    "prefix": "con",
-    "body": "constructor(props) {\n\tsuper(props);\n\t$0\n}\n",
-    "description": "Adds a default constructor for the class that contains props as arguments"
-  },
-  "classConstructorContext": {
-    "prefix": "conc",
-    "body": "constructor(props, context) {\n\tsuper(props, context);\n\t$0\n}\n",
-    "description": "Adds a default constructor for the class that contains props and context as arguments"
+    "body": "import { h } from 'preact';\nimport PropTypes from 'prop-types';\n\nconst ${1:componentName} = props => {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n};\n\n${1:componentName}.propTypes = {\n\t$0\n};\n\nexport default ${1:componentName};",
+    "description": "Creates a stateless Preact component with PropTypes and ES6 module system"
   },
 
   "emptyState": {
@@ -113,8 +88,8 @@
 
    "componentRender": {
     "prefix": "ren",
-    "body": "render() {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n}",
-    "description": "When called, it should examine this.props and this.state and return a single child element."
+    "body": "render({}, {}) {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n}",
+    "description": "Render method."
   },
 
   "componentSetStateObject": {
@@ -123,34 +98,11 @@
     "description": "Performs a shallow merge of nextState into current state"
   },
 
-  "componentSetStateFunc": {
-    "prefix": "ssf",
-    "body": "this.setState((state, props) => { return { $0 }});\n",
-    "description": "Performs a shallow merge of nextState into current state"
-  },
-
-  "componentProps": {
-    "prefix": "props",
-    "body":"this.props.$0",
-    "description": "Access component's props"
-  },
-
-  "componentState": {
-    "prefix": "state",
-    "body": "this.state.$0",
-    "description": "Access component's state"
-  },
-
-  "bindThis": {
-    "prefix": "bnd",
-	"body": "this.$1 = this.$1.bind(this);$0",
-	"description": "Binds the this of a method. To be used inside a constructor"
-  },
-
+  // Proptypes has not been touched
   "propTypes": {
-	"prefix": "rpt",
-	"body": "$1.propTypes = {\n\t$2\n};",
-	"description": "Creates empty propTypes declaration"
+    "prefix": "rpt",
+    "body": "$1.propTypes = {\n\t$2\n};",
+    "description": "Creates empty propTypes declaration"
   },
 
   "propTypeArray": {
@@ -226,12 +178,12 @@
   "propTypeElement": {
     "prefix": "ptel",
     "body": "PropTypes.element,",
-    "description": "React element prop type"
+    "description": "Preact element prop type"
   },
   "propTypeElementRequired": {
     "prefix": "ptelr",
     "body": "PropTypes.element.isRequired,",
-    "description": "React element prop type required"
+    "description": "Preact element prop type required"
   },
   "propTypeInstanceOf": {
     "prefix": "pti",
@@ -293,174 +245,38 @@
     "body": "PropTypes.shape({\n\t$0\n}).isRequired,",
     "description": "An object taking on a particular shape required"
   },
-  // Redux
-  "Redux constant": {
-    "prefix": "rat",
-    "body": "export const $1 = '$1';",
-    "description": "Redux action types."
-  },
-  "Redux actionCreator": {
-    "prefix": "rac",
-    "body": [
-      "export const ${actionCreator} = (${payload}) => ({",
-      "\ttype: ${actionType},",
-      "\t${payload}",
-      "});"
-    ]
-  },
-  "Redux Reducer": {
-    "prefix": "reducer",
-    "body": [
-      "export const ${1:reducerName} = (state = $2, action) => {",
-      "\tswitch (action.type) {",
-      "\t\tcase '${3:ACTION_TYPE}':",
-      "\t\t\treturn $4;$0",
-      "\t\tdefault:",
-      "\t\t\treturn state;",
-      "\t}",
-      "};"
-    ],
-    "description": "Redux reducer."
-  },
-  "Redux Store": {
-    "prefix": "store",
-    "body": [
-      "import { ${1:reducerName} } from './reducer';",
-      "import { createStore } from 'redux';",
-      "",
-      "const store = createStore(${1:reducerName});",
-      "",
-      "export default store;"
-    ],
-    "description": "Redux store."
-  },
-  "Redux Selector": {
-    "prefix": "selector",
-    "body":[
-      "const ${1:selectorName} = (state, filter) => {",
-      "\tswitch(filter) {",
-      "\t\tcase '${2:filterType}':",
-      "\t\t\treturn state.filter(t => $3);",
-      "\t\tdefault:",
-      "\t\t\treturn state;",
-      "\t}",
-      "};",
-      "",
-      "export default ${1:selectorName};"
-    ],
-    "description": "Redux selector."
-  },
-  // react-redux
-  "Connect Redux": {
-    "prefix": "imconnect",
-    "body": "import { connect } from 'react-redux';"
-  },
-  "Provider Redux": {
-    "prefix": "improvider",
-    "body": "import { Provider } from 'react-redux';"
-  },
-  "mapStateToProps": {
-    "prefix": "mstp",
-    "body": [
-      "const mapStateToProps = (state, ownProps) => ({",
-      "\t${1:propName}: ${2:prop}",
-      "});"
-    ],
-    "description": "react-redux connect mapStateToProps const function."
-  },
-  "mapDispatchToProps": {
-    "prefix": "mdtp",
-    "body": [
-      "const mapDispatchToProps = (dispatch) => ({",
-      "\t${1:propName}: (${2:params}) => {",
-      "\t\tdispatch(${3:actionCreator}(${2:params}));",
-      "\t}",
-      "});"
-    ],
-    "description": "react-redux connect mapDispatchToProps const function."
-  },
-  "connect": {
-    "prefix": "connect",
-    "body": [
-        "const ${containerName} = connect(",
-        "\t${mapStateToProps,}",
-        "\t${mapDispatchToProps}",
-        ")(${component});",
-        "",
-        "export default ${containerName};"
-    ],
-    "description": "react-redux connect method."
-  },
-  "provider": {
-    "prefix": "provider",
-    "body": [
-        "<Provider store={store}>",
-        "\t${Component}$0",
-        "</Provider>"
-    ],
-    "description": "react-redux Provider Container."
-  },
-  "container": {
-    "prefix": "container",
-    "body": [
-        "import { connect } from 'react-redux';",
-        "import ${component} from '../Components/${component}';",
-        "import { ${actionCreator} } from '../${actionPath}';",
-        "",
-        "const mapStateToProps = (state, ownProps) => {",
-        "\treturn {",
-        "\t\t${propName}: ${prop}",
-        "\t};",
-        "};",
-        "",
-        "const mapDispatchToProps = (dispatch) => {",
-        "\treturn {",
-        "\t\t${eventHandler}: (${param}) => {",
-        "\t\t\tdispatch(${actionCreator}(${param}))",
-        "\t\t}",
-        "\t};",
-        "};",
-        "const ${containerName} = connect(",
-        "\tmapStateToProps,",
-        "\tmapDispatchToProps",
-        ")(${component});",
-        "",
-        "export default ${containerName};"
-    ],
-    "description" : "Redux container"
-  },
-  // react-router
-  "ES6 react-router Import": {
-		"prefix": "imrr",
+
+
+  // Preact-router
+  "ES6 Preact-router Import": {
+		"prefix": "impr",
 		"body": [
       "import {",
-      "\tBrowserRouter as Router,",
-      "\tRoute",
-      "} from 'react-router-dom';"
+      "\tRouter",
+      "} from 'preact-router';"
     ]
 	},
-  "ES6 react-router NavLink Import": {
-    "prefix": "imnl",
-    "body": "import { NavLink } from 'react-router-dom';"
+  "ES6 Preact-router Link Import": {
+    "prefix": "impl",
+    "body": "import { Link } from 'preact-router/match';"
   },
-  "ES6 react-router withRouter Import": {
-    "prefix": "imwr",
-    "body": "import { withRouter } from 'react-router';"
-  },
-  "react-router Router": {
+  "preact-router Router": {
 		"prefix": "router",
 		"body": [
-      "<Router>",
-      "\t<Route path='${1:path}' component={${2:component}}/>$0",
+      "\nhandleRoute = e => {this.currentUrl = e.url;};\n",
+      "<Router onChange={this.handleRoute}>",
+      "\t<${1:name} path='${2:path}'/>$0",
       "</Router>"
     ]
-	},
-  "react-router Route": {
+  },
+  "preact-router Route": {
 		"prefix": "route",
-		"body": "<Route path='${1:path}' component={${2:component}}/>"
+		"body": "<${1:name} path='${2:path}'/>"
 	},
-  "react-router NavLink": {
-		"prefix": "navlink",
-		"body": "<NavLink to={${1:path}}>{$anchorText}</NavLink>"
+  "preact-router NavLink": {
+		"prefix": "plink",
+		"body": "<Link href={${1:path}}>{$anchorText}</Link>"
 	}
 }
+
+											

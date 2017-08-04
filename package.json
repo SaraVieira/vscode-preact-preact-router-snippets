@@ -1,9 +1,9 @@
 {
-  "name": "react-redux-react-router-snippets",
-  "description": "React Ecosystem code snippets all in one",
-  "version": "0.2.4",
-  "displayName": "React/Redux/react-router Snippets",
-  "publisher": "discountry",
+  "name": "preact-preact-router-snippets",
+  "description": "Preact code snippets all in one",
+  "version": "0.1.0",
+  "displayName": "Preact/preact-router Snippets",
+  "publisher": "SaraVieira",
   "icon": "images/logo.png",
   "galleryBanner": {
     "theme": "light"
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/discountry/vscode-react-redux-react-router-snippets"
+    "url": "https://github.com/SaraVieira/vscode-react-redux-react-router-snippets"
   },
   "engines": {
     "vscode": "0.10.x"
@@ -21,10 +21,10 @@
   ],
   "contributes": {
     "snippets": [
-	  {
-        "language": "javascriptreact",
-        "path": "./snippets/snippets.json"
-	  },
+      {
+          "language": "javascriptreact",
+          "path": "./snippets/snippets.json"
+      },
       {
         "language": "javascript",
         "path": "./snippets/snippets.json"
