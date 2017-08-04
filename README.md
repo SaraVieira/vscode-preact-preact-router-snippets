@@ -1,11 +1,11 @@
 # Preact/preact-router Snippets
 <p align="center">
-    <img alt="Preact" title="Preact" src="./images/logo.png" width="150">
+    <img alt="Preact" title="Preact" src="https://raw.githubusercontent.com/SaraVieira/vscode-preact-preact-router-snippets/master/images/logo.png" width="150">
 </p>
 
- [![Version](http://vsmarketplacebadge.apphb.com/version/saravieira.preact-preact-router-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=saravieira.preact-preact-router-snippets)
-[![Install](http://vsmarketplacebadge.apphb.com/installs/saravieira.preact-preact-router-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=saravieira.preact-preact-router-snippets)
-[![Ratings](http://vsmarketplacebadge.apphb.com/rating-short/saravieira.preact-preact-router-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=saravieira.preact-preact-router-snippets) 
+ [![Version](https://vsmarketplacebadge.apphb.com/version/saravieira.preact-preact-router-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=saravieira.preact-preact-router-snippets)
+[![Install](https://vsmarketplacebadge.apphb.com/installs/saravieira.preact-preact-router-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=saravieira.preact-preact-router-snippets)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/saravieira.preact-preact-router-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=saravieira.preact-preact-router-snippets) 
 
 Useful Preact Ecosystem snippets for [Visual Studio Code](https://code.visualstudio.com/), including:
 

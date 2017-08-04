@@ -1,9 +1,11 @@
 {
+  "manifestVersion": 1,
   "name": "preact-preact-router-snippets",
+  "id": "preact-preact-router-snippets",
   "description": "Preact code snippets all in one",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Preact/preact-router Snippets",
-  "publisher": "SaraVieira",
+  "publisher": "saravieira",
   "icon": "images/logo.png",
   "galleryBanner": {
     "theme": "light"
@@ -11,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SaraVieira/vscode-react-redux-react-router-snippets"
+    "url": "https://github.com/SaraVieira/vscode-preact-preact-router-snippets"
   },
   "engines": {
     "vscode": "0.10.x"
@@ -19,8 +21,12 @@
   "categories": [
     "Snippets"
   ],
-  "contributes": {
-    "snippets": [
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "contributions": [
       {
           "language": "javascriptreact",
           "path": "./snippets/snippets.json"
@@ -34,5 +40,4 @@
         "path": "./snippets/snippets.json"
       }
     ]
-  }
 }
