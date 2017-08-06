@@ -1,4 +1,4 @@
-# Preact/preact-router Snippets
+# Preact/Preact-router Snippets
 <p align="center">
     <img alt="Preact" title="Preact" src="https://raw.githubusercontent.com/SaraVieira/vscode-preact-preact-router-snippets/master/images/logo.png" width="150">
 </p>
