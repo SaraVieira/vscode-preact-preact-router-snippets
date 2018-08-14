@@ -29,7 +29,7 @@
 
   "preactStateless": {
     "prefix": "psc",
-    "body": "import { h, Component } from 'preact';\n\nconst ${1:componentName} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\nexport default ${1:componentName};",
+    "body": "import { h } from 'preact';\n\nconst ${1:componentName} = () => {\n\treturn (\n\t\t<div>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\nexport default ${1:componentName};",
     "description": "Creates a stateless Preact component without PropTypes and ES6 module system"
   },
   "preactStatelessProps": {
